@@ -9,17 +9,22 @@ export const styles = `
     }
 
     .widget__container {
-        box-shadow: 0 0 18px 8px rgba(0, 0, 0, 0.1), 0 0 32px 32px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 0 18px 8px rgba(0, 0, 0, 0.1), 0 0 12px 12px rgba(0, 0, 0, 0.08);
         width: 400px;
         overflow: auto;
         right: -25px;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         bottom: 75px;
         position: absolute;
         transition: max-height .2s ease;
         font-family: Helvetica, Arial ,sans-serif;
-        background-color: #e6e6e6a6;
+        background-color: #fff;
         border-radius: 10px;
         box-sizing: border-box;
+
     }
 
     .widget__icon {
@@ -36,7 +41,7 @@ export const styles = `
     }
     .button__container {
         border: none;
-        background-color: #0f172a;
+        background-color: #FF5BBC;
         width: 60px;
         height: 60px;
         border-radius: 50%;
@@ -49,11 +54,12 @@ export const styles = `
 
     .widget__header {
         padding: 1rem 2rem 1.5rem;
-        background-color: #000;
+        background-color: #FF5BBC;
         color: #fff;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
         text-align: center;
+      
     }
 
     .widget__header h3 {
