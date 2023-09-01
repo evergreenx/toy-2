@@ -10,31 +10,25 @@ function getPosition(position) {
 
 function createChatContent(widgetContainer) {
   widgetContainer.innerHTML = `
-    <header class="widget__header bg-gray-800 text-white py-2 px-4">
-        <h3 class="text-lg">
+    <header class="widget__header">
+        <h3>
         MARTHA 
         </h3>
     </header>
 
     <div class="chat__container p-4 ">
-        <div class="chat__messages-container border-none rounded-lg overflow-y-auto p-2" style="max-height: 300px;">
+        <div class="chat__messages-container">
           <div class="chat__messages">
            
           </div>
         </div>
-        <div class="chat__input mt-4 flex">
+        <div class="chat__input">
             <input
                 type="text"
                 id="chatInput"
-                class="border border-gray-300 
-                
-                font-medium text-base 
-            
-                focus:outline-none focus:ring 
-                rounded-lg w-[300px] h-[40px] px-3"
                 placeholder="Type your message..."
             />
-            <button id="sendMessageButton" class="ml-2 py-2 px-4 text-white rounded-full  focus:outline-none focus:ring focus:border-blue-300">
+            <button id="sendMessageButton" >
             
             
             <svg
@@ -139,16 +133,7 @@ function initializeChatWidget(position = "bottom-right") {
 function appendUserMessage(chatMessages, message) {
   const messageElement = document.createElement("div");
   messageElement.classList.add(
-    "chat__message",
-    "user",
-    "flex",
-    "justify-end",
-    "bg-blue-100",
-    "text-blue-900",
-    "mb-2",
-    "p-2",
-    "rounded-lg",
-    "text-left"
+    "chat__message__user"
   );
   messageElement.textContent = message;
   chatMessages.appendChild(messageElement);
@@ -157,17 +142,7 @@ function appendUserMessage(chatMessages, message) {
 function appendBotMessage(chatMessages, message) {
   const messageElement = document.createElement("div");
   messageElement.classList.add(
-    "chat__message",
-    "bot",
-
-    "flex",
-    "justify-start",
-    "text-white",
-    "bg-[#FF5BBC]",
-    "mb-2",
-    "p-2",
-    "rounded-lg",
-    "text-left"
+    "chat__message__bot"
   );
   messageElement.textContent = message;
   chatMessages.appendChild(messageElement);
