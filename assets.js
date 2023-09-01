@@ -59,7 +59,9 @@ export const styles = `
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
         text-align: center;
-      
+        background-color: rgb(255, 91, 188);
+        text-color: white;
+        padding: 20px 40px 20px 40px;
     }
 
     .widget__header h3 {
@@ -112,6 +114,79 @@ export const styles = `
 
     form button:hover {
         background-color: rgba(0, 0, 0, 95%);
+    }
+
+    .chat__container{
+        padding: 20px;
+    }
+
+    .chat__messages-container{
+        max-height: 300px;
+        padding: 10px;
+        border: none;
+        border-radius: 8px;
+        overflow-y: auto;
+    }
+
+    .chat__input{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .chat__input input{
+        border-style: solid;
+        border-color: rgb(209 213 219);
+        border-width: 1px;
+        font-size: 16px;
+        font-weight: 500;
+        border-radius: 8px;
+        width: 300px;
+        height: 40px;
+        padding: 0 12px 0 12px;
+    }
+
+    .chat__input input:focus{
+        border-color: blue;
+        box-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+        outline: 2px solid transparent;
+    }
+
+    .chat__input button{
+        margin-left: 10px;
+        padding: 10px 20px 10px 20px;
+        color: white;
+        border-radius: 9999px;
+    }
+
+    .chat__input button:focus{
+        outline: 2px solid transparent;
+        box-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+        border-color: rgb(147 197 253);
+    }
+
+    .chat__message__user{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        background-color: rgb(254 226 226);
+        color: rgb(30 58 138);
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 8px;
+        text-align: right;
+    }
+
+    .chat__message__bot{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        color: white;
+        background-color: rgb(255, 91, 188);
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 8px;
+        text-align: left;
     }
 `;
 
