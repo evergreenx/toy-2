@@ -63,7 +63,6 @@ function toggleChat(widget) {
     widget.closeIcon.classList.remove("widget__hidden");
     widget.widgetContainer.classList.remove("widget__hidden");
   } else {
-    createChatContent(widget.widgetContainer);
     widget.widgetIcon.classList.remove("widget__hidden");
     widget.closeIcon.classList.add("widget__icon", "widget__hidden");
     widget.widgetContainer.classList.add("widget__hidden");
